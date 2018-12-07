@@ -13,6 +13,7 @@ var spotify = new Spotify(keys.spotify);
 
 var person1 = process.argv[2];
 var yourSong = process.argv[3];
+var myMovie= "";
 
 if (process.argv[2] == "spotify-this") {
     spotify.search(
@@ -35,18 +36,10 @@ if (process.argv[2] == "spotify-this") {
                 console.log("album: " + songs[i].album.name);
                 console.log("-----------------------------------");
             }
-        }
+        } 
     );
-};
-
-
-
-
-var name = process.argv[2];
-var myMovie = "";
-
-
-if (name == "movie-this") {
+    
+} else  if (person1 == "movie-this") {
 
     for (i =3; i < process.argv.length; i++) {
         myMovie += process.argv[i] + "%20";
@@ -84,28 +77,33 @@ if (name == "movie-this") {
 
 
     );
-
-
-    var userChoice = process.argv[2];
-    var artist = process.argv[3];
-
-
-    if (userChoice== "concert-this") {
-
-    var bandsUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-
-    axios.get(bandsUrl).then(
-        function (response) {
-            console.log(response.data[0].lineup);
-
-
     }
 
 
 
-    )
 
 
-}
-}
 
+
+
+//     var userChoice = process.argv[2];
+//     var artist = process.argv[3];
+
+
+//     if (userChoice== "concert-this") {
+
+//     var bandsUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+
+//     axios.get(bandsUrl).then(
+//         function (response) {
+//             console.log(response.data[0].lineup);
+
+
+//     }
+
+
+
+//     )
+
+
+// }
