@@ -1,19 +1,61 @@
+
 # liri-real
 
-<<<<<<< HEAD
-=======
+Description: LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
 
-Liri is a command line node application that takes in four commands:
+### Instructions 
 
-my-concert: Takes no parameters. Will log the last 20 tweets from the user account created by me for "Molva_Roham", a horror-themed short story deployed in 140-character tweet format.
-spotify-this-song: Takes a song title of n-word length as a parameter. Will log information about the song, artist, and album. If you pass it no parameters, the song logged will be "CSS Suxxx" by CSS.
-movie-this: Takes a movie title of n-word length as a parameter. Will log information about the movie, year, description, and actors. If you pass it no parameters, the movie logged will be Spaceballs. And you should totally watch it.
-do-what-it-says: Takes no parameters. Will call a random function among the previous three with surprise information from a random.txt file.
-Technologies Used:
-Node.js
-Javascript
-Request (NPM Package)
-Node-Spotify-API (NPM Package)
-Axios(NPM-package)
->>>>>>> 629867b2cbee7835aad26e8b0045a6035c63f997
+##### When user types in
+
+
+*movie-this *userinput*
+
+This will output the following information to your terminal/bash window:
+
+        *Title of the movie.
+        
+       *Year the movie came out.
+  
+       *IMDB Rating of the movie.
+       
+       * Rotten Tomatoes Rating of the movie.
+       
+       * Country where the movie was produced.
+       
+       * Language of the movie.
+       
+       * Plot of the movie.
+       
+       * Unordered sub-list.
+       
+       * Actors in the movie.
+
+
+
+concert-this *userinput*
+
+
+* This will search the Bands in Town Artist Events API (`"https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"`) for an artist and render the following information about each event to the terminal:
+
+     * Name of the venue
+
+     * Venue location
+
+     * Date of the Event (use moment to format this as "MM/DD/YYYY")
+
+spotify-this *userinput*
+
+* This will show the following information about the song in your terminal/bash window
+
+     * Artist(s)
+
+     * The song's name
+
+     * A preview link of the song from Spotify
+
+     * The album that the song is from
+
+     ![](giphy.gif.mp4)
+
+<!-- ![](giphy.gif) -->
