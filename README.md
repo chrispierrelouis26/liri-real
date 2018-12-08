@@ -56,5 +56,5 @@ spotify-this *userinput*
 
      * The album that the song is from
 
-     ![](work.mp4)
+     ![work.mp4](work.mp4)
 
