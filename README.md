@@ -56,5 +56,5 @@ spotify-this *userinput*
 
      * The album that the song is from
 
-     ![](img/giphy.gif.mp4)
+     ![](work.mp4)
 
