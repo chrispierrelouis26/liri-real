@@ -1,4 +1,4 @@
-require("dotenv").config();
+norequire("dotenv").config();
 var inquirer = require("inquirer");
 var Spotify = require('node-spotify-api');
 var axios = require("axios");
@@ -12,13 +12,15 @@ var spotify = new Spotify(keys.spotify);
 
 
 var person1 = process.argv[2];
-var yourSong = process.argv[3];
+var userInput = process.argv.slice(3).join(" ");
+var myMovie = "";
+var artist = "";
 
-if (process.argv[2] == "spotify-this") {
+if (person1 == "spotify-this") {
     spotify.search(
         {
             type: "track",
-            query: yourSong
+            query: userInput
         },
         function (err, data) {
             if (err) {
@@ -26,7 +28,7 @@ if (process.argv[2] == "spotify-this") {
                 return;
             } else
 
-            var songs = data.tracks.items;
+                var songs = data.tracks.items;
 
             for (var i = 0; i < songs.length; i++) {
                 console.log(i);
@@ -37,23 +39,15 @@ if (process.argv[2] == "spotify-this") {
             }
         }
     );
-};
 
+} else if (person1 === "movie-this") {
 
-
-
-var name = process.argv[2];
-var myMovie = "";
-
-
-if (name == "movie-this") {
-
-    for (i =3; i < process.argv.length; i++) {
+    for (i = 3; i < process.argv.length; i++) {
         myMovie += process.argv[i] + "%20";
     }
- 
+
     var queryUrl = "http://www.omdbapi.com/?t=" + myMovie + "&y=&plot=short&apikey=trilogy";
-   
+
 
     console.log(myMovie);
 
@@ -62,50 +56,52 @@ if (name == "movie-this") {
 
             var short = response.data;
 
+            console.log("================================================");
             console.log("The movie's rating is: " + short.imdbRating);
-            console.log("The movie year is " +short.Year);
+            console.log("The movie year is " + short.Year);
             console.log("The movie release date is " + short.Released);
             console.log("The Actors in the film are " + short.Actors);
             console.log("The title of this movie is " + short.Title);
+            console.log("The movie country is " + short.Country);
+            console.log("The language is " +short.Language);
+            console.log("The actors in this movie are " + short.Actors);
+            console.log("The plot of this movie is : " + short.Plot);
+            console.log("================================================");
             // console.log(response);
 
 
-            fs.appendFile("sample.txt", "," + response.data.Title, function (err) {
+            fs.appendFile("sample.txt", + short.Title, function (err) {
 
                 // If an error was experienced we will log it.
                 if (err) {
                     console.log(err);
-                } else {
+                } else  {
                     console.log("Content Added!");
-                }
+                } 
 
             });
         }
 
 
     );
+} else if (person1==="concert-this") {
 
 
-    var userChoice = process.argv[2];
-    var artist = "";
 
+    var myUrl =  "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
 
-     if (userChoice== "concert-this") {
+    console.log(userInput);
 
-    var bandsUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
-
-    axios.get(bandsUrl).then(
-        function (response) {
-            console.log(response.data[0].lineup);
-
-
+    axios.get(myUrl).then(function(response) {
+        // console.log(response.data[0]);
+        console.log("================================================");
+        console.log("Venue location " + response.data[0].venue.country);
+        console.log("Venue name " + response.data[0].venue.name);
+        console.log("Datetime " + response.data[0.].datetime);
+       
+        console.log("================================================");
     }
-
-
-
-    )
-
-
-}
-}
-
+    
+    ) 
+} 
+    
