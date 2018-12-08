@@ -56,5 +56,8 @@ spotify-this *userinput*
 
      * The album that the song is from
 
-     ![giphy.gif.mp4](giphy.gif.mp4)
-
+     <!-- ![compressed.mp4](compressed.mp4)
+ -->
+<video width="320" height="240" controls>
+  <source src="work.mov" type="video/mp4">
+</video>
