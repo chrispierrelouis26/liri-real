@@ -87,10 +87,10 @@ if (name == "movie-this") {
 
 
     var userChoice = process.argv[2];
-    var artist = process.argv[3];
+    var artist = "";
 
 
-    if (userChoice== "concert-this") {
+     if (userChoice== "concert-this") {
 
     var bandsUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
 
