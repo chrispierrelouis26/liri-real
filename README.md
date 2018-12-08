@@ -56,8 +56,4 @@ spotify-this *userinput*
 
      * The album that the song is from
 
-     <!-- ![compressed.mp4](compressed.mp4)
- -->
-<video width="320" height="240" controls>
-  <source src="work.mov" type="video/mp4">
-</video>
+  ![Snip snap shot for yall](work.jpg)My snippet*
