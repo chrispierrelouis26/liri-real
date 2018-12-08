@@ -1,19 +1,44 @@
-# liri-real
-
-<<<<<<< HEAD
-=======
+#### liri-real
 
 
-Liri is a command line node application that takes in four commands:
 
-my-concert: Takes no parameters. Will log the last 20 tweets from the user account created by me for "Molva_Roham", a horror-themed short story deployed in 140-character tweet format.
-spotify-this-song: Takes a song title of n-word length as a parameter. Will log information about the song, artist, and album. If you pass it no parameters, the song logged will be "CSS Suxxx" by CSS.
-movie-this: Takes a movie title of n-word length as a parameter. Will log information about the movie, year, description, and actors. If you pass it no parameters, the movie logged will be Spaceballs. And you should totally watch it.
-do-what-it-says: Takes no parameters. Will call a random function among the previous three with surprise information from a random.txt file.
-Technologies Used:
-Node.js
-Javascript
-Request (NPM Package)
-Node-Spotify-API (NPM Package)
-Axios(NPM-package)
->>>>>>> 629867b2cbee7835aad26e8b0045a6035c63f997
+
+##### Instructions 
+
+## When user types in
+movie-this *userinput*
+
+This will output the following information to your terminal/bash window:
+
+       --1. Title of the movie.
+       ..*Year the movie came out.
+       * IMDB Rating of the movie.
+       * Rotten Tomatoes Rating of the movie.
+       * Country where the movie was produced.
+       * Language of the movie.
+       * Plot of the movie.
+       ⋅⋅* Unordered sub-list.
+       * Actors in the movie.
+
+
+
+concert-this *userinput*
+spotify-this *userinput*
+
+*node liri.js concert-this: This will show your last 20 tweets and when they were created at in your terminal/bash window.
+*node liri.js spotify-this-song '' This will show the following information about the song in your terminal/bash window:
+*Artist(s),
+The song's name,
+A preview link of the song from Spotify,
+The album that the song is from
+If no song is provided then your program will default to "The Sign" by Ace of Base.
+node liri.js movie-this ''. This will output the following information to your terminal/bash window:
+Title of the movie.
+Year the movie came out.
+IMDB Rating of the movie.
+Rotten Tomatoes Rating of the movie.
+Country where the movie was produced.
+Language of the movie.
+Plot of the movie.
+Actors in the movie.
+node liri.js do-what-it-says Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands. It should run spotify-this-song for "I Want it That Way," as follows the text in random.txt. Feel free to change the text in that document to test out the feature for other commands.
