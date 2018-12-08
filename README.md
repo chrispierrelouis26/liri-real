@@ -1,6 +1,7 @@
 
 # liri-real
 
+<<<<<<< HEAD
 Description: LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in parameters and gives you back data.
 
 
@@ -53,9 +54,14 @@ spotify-this *userinput*
      * The song's name
 
      * A preview link of the song from Spotify
+=======
+>>>>>>> b7beedf50d379be97d437e63d93d4055c537722b
 
      * The album that the song is from
 
+<<<<<<< HEAD
      ![](giphy.gif.mp4)
 
 <!-- ![](giphy.gif) -->
+=======
+>>>>>>> b7beedf50d379be97d437e63d93d4055c537722b
